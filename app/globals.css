@@ -64,3 +64,138 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ============================================================
+   LIQUID GLASS SYSTEM
+   Frosted translucency + specular sheen + inset highlight.
+   Text sits on high-opacity glass so WCAG AA contrast holds.
+   ============================================================ */
+
+/* Light glass — for use over the off-white / ambient-blob background */
+.glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 8px 32px rgba(20, 20, 30, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Slightly heavier frost for large content panels */
+.glass-strong {
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 10px 40px rgba(20, 20, 30, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Dark glass — for use over black / image sections */
+.glass-dark {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Specular diagonal sheen — the "liquid" highlight sweeping the top-left */
+.glass-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.08) 22%,
+    rgba(255, 255, 255, 0) 46%
+  );
+  z-index: 1;
+}
+/* Keep real content above the sheen */
+.glass-sheen > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Edge-light: a brighter refractive rim along the bottom-right */
+.glass-edge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    315deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 30%
+  );
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* Hover lift shared by glass cards */
+.glass-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 18px 50px rgba(20, 20, 30, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+.glass-dark.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Ambient blob field ---- */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.5;
+  will-change: transform;
+}
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(4%, -6%, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-5%, 4%, 0) scale(0.95);
+  }
+}
+.blob-anim {
+  animation: blob-drift 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-anim {
+    animation: none !important;
+  }
+  .glass-hover:hover {
+    transform: none;
+  }
+}

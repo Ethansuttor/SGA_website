@@ -51,13 +51,13 @@ export default function ElectionsPage() {
       </section>
 
       {/* How elections work timeline */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max">
           <SectionHeading eyebrow="The process" title="How an SGA election works" accentKey="accent-loyalty" />
           <div className="grid gap-gutter md:grid-cols-4">
             {timeline.map((t, i) => (
               <Reveal key={t.phase} delay={i * 0.08} className="h-full">
-                <div className="flex h-full flex-col rounded-lg border border-border-subtle bg-white p-6">
+                <div className="glass glass-sheen glass-hover flex h-full flex-col rounded-lg p-6">
                   <div className="mb-4 flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-loyalty text-white">
                       <Icon name={t.icon} size={20} />
@@ -76,7 +76,7 @@ export default function ElectionsPage() {
       </section>
 
       {/* Official documents & results */}
-      <section className="border-y border-border-subtle bg-white py-16 md:py-20">
+      <section className="border-y border-white/40 py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="Official resources"

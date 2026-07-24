@@ -26,7 +26,7 @@ export default function BranchesPage() {
         title="How SGA governs itself"
         intro="Like the federal government, SGA splits its power across three branches so students always have checks, balances, and multiple ways to be heard."
       />
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max flex flex-col gap-6">
           {branchList.map((b, i) => {
             const accentText =
@@ -45,7 +45,7 @@ export default function BranchesPage() {
               <Reveal key={b.slug} delay={i * 0.08}>
                 <Link
                   href={`/branches/${b.slug}`}
-                  className={`group grid gap-6 rounded-lg border border-border-subtle bg-white p-6 transition-all duration-300 hover:shadow-ambient md:grid-cols-[auto_1fr_auto] md:items-center md:p-8 ${accentBorder}`}
+                  className={`glass glass-sheen glass-hover group grid gap-6 rounded-lg p-6 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8 ${accentBorder}`}
                 >
                   <span className={`flex h-16 w-16 items-center justify-center rounded-lg text-white ${accentBg}`}>
                     <Icon name={icons[b.slug]} size={30} />

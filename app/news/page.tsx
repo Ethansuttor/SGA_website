@@ -23,13 +23,13 @@ export default function NewsPage() {
         intro="Recaps, decisions, and announcements from your student government. Looking for campus events? The live university calendar has every happening on campus."
       />
 
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max">
           {/* Featured article */}
           <Reveal>
             <Link
               href={`/news/${feature.slug}`}
-              className="group grid overflow-hidden rounded-lg border border-border-subtle bg-white transition-shadow hover:shadow-ambient md:grid-cols-2"
+              className="glass glass-sheen glass-hover group grid overflow-hidden rounded-lg md:grid-cols-2"
             >
               <div className="relative flex min-h-[240px] items-center justify-center bg-uofl-black p-8">
                 <div
@@ -68,7 +68,7 @@ export default function NewsPage() {
               <Reveal key={a.slug} delay={(i % 3) * 0.07} as="article" className="h-full">
                 <Link
                   href={`/news/${a.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-lg border border-border-subtle bg-white transition-shadow hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex h-full flex-col overflow-hidden rounded-lg"
                 >
                   <div className={`h-1.5 w-full ${
                     a.accent === "accent-loyalty" ? "bg-accent-loyalty"
@@ -92,7 +92,7 @@ export default function NewsPage() {
           </div>
 
           {/* Live calendar CTA */}
-          <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-lg border border-border-subtle border-l-4 border-l-accent-progress bg-white p-7 md:flex-row md:items-center">
+          <div className="glass glass-sheen mt-14 flex flex-col items-start justify-between gap-6 rounded-lg border-l-4 border-l-accent-progress p-7 md:flex-row md:items-center">
             <div className="flex items-start gap-4">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent-progress text-white">
                 <Icon name="calendar" size={24} />

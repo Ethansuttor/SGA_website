@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 
 export default function NotFound() {
   return (
-    <section className="bg-background">
+    <section>
       <div className="container-max flex min-h-[60vh] flex-col items-center justify-center py-20 text-center">
         <span className="font-headline text-[80px] font-bold leading-none text-uofl-red md:text-[120px]">
           404

@@ -3,6 +3,7 @@ import { Montserrat, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { GlassBackground } from "@/components/GlassBackground";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -54,7 +55,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${libreFranklin.variable}`}>
-      <body className="flex min-h-screen flex-col bg-background font-body text-body-md text-on-surface antialiased">
+      <body className="flex min-h-screen flex-col font-body text-body-md text-on-surface antialiased">
+        <GlassBackground />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-uofl-red focus:px-4 focus:py-2 focus:font-bold focus:text-white"

@@ -34,7 +34,7 @@ export default function ResourcesPage() {
       />
 
       {/* Campus services quick-links */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="Campus services"
@@ -48,7 +48,7 @@ export default function ResourcesPage() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full items-center justify-between gap-3 rounded-lg border border-border-subtle bg-white px-4 py-4 transition-all hover:-translate-y-0.5 hover:border-uofl-red hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex h-full items-center justify-between gap-3 rounded-lg px-4 py-4"
                 >
                   <span className="flex flex-col">
                     <span className="font-body text-body-md font-semibold text-on-surface">{s.label}</span>
@@ -63,14 +63,14 @@ export default function ResourcesPage() {
       </section>
 
       {/* Document archive */}
-      <section className="border-y border-border-subtle bg-white py-16 md:py-20">
+      <section className="border-y border-white/40 py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="Document archive"
             title="SGA documents & records"
             intro="A structured archive of SGA's governing documents, minutes, and reports."
           />
-          <div className="mb-6 flex items-start gap-3 rounded-lg border border-border-subtle border-l-4 border-l-accent-courage bg-surface-container-low p-4">
+          <div className="glass glass-sheen mb-6 flex items-start gap-3 rounded-lg border-l-4 border-l-accent-courage p-4">
             <Icon name="document" size={20} className="mt-0.5 shrink-0 text-accent-bronze" />
             <p className="text-body-sm text-secondary">
               <strong className="text-on-surface">Prototype note:</strong> the entries below are
@@ -86,7 +86,7 @@ export default function ResourcesPage() {
                   href={d.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-lg border border-border-subtle bg-white p-5 transition-all hover:border-uofl-red hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex items-center gap-4 rounded-lg p-5"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-surface-container text-secondary transition-colors group-hover:bg-uofl-red group-hover:text-white">
                     <Icon name="document" size={22} />

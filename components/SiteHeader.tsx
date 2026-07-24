@@ -16,8 +16,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Black utility bar */}
-      <div className="bg-uofl-black text-white">
+      {/* Black utility bar — glassy black */}
+      <div className="border-b border-white/10 bg-uofl-black/85 text-white backdrop-blur-md">
         <div className="container-max flex h-9 items-center justify-between text-label-sm">
           <a
             href="https://louisville.edu"
@@ -57,8 +57,8 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* White main nav with red underline active state */}
-      <div className="border-b border-border-subtle bg-white">
+      {/* Main nav — liquid glass with red underline active state */}
+      <div className="glass glass-sheen border-x-0 border-t-0 border-b border-b-white/40">
         <div className="container-max flex h-[68px] items-center justify-between">
           <Link href="/" className="group flex items-center gap-3" aria-label="UofL SGA home">
             <span className="flex h-10 w-10 items-center justify-center rounded bg-uofl-red font-headline text-headline-sm font-bold text-white">
@@ -99,7 +99,7 @@ export function SiteHeader() {
                     />
                   </Link>
                   {item.children && (
-                    <div className="invisible absolute left-0 top-full w-60 -translate-y-1 rounded-lg border border-border-subtle bg-white opacity-0 shadow-ambient transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="glass glass-sheen invisible absolute left-0 top-full w-60 -translate-y-1 rounded-lg opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
@@ -143,7 +143,7 @@ export function SiteHeader() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-b border-border-subtle bg-white lg:hidden"
+            className="glass overflow-hidden border-x-0 border-t-0 border-b border-b-white/40 lg:hidden"
             aria-label="Mobile"
           >
             <div className="container-max flex flex-col py-2">

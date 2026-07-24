@@ -41,7 +41,7 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="rounded-lg border border-border-subtle border-l-4 border-l-accent-progress bg-white p-8 text-center">
+      <div className="glass glass-sheen rounded-lg border-l-4 border-l-accent-progress p-8 text-center">
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent-progress text-white">
           <Icon name="check" size={28} />
         </span>
@@ -66,7 +66,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg border border-border-subtle bg-white p-6 md:p-8">
+    <form onSubmit={handleSubmit} className="glass glass-sheen rounded-lg p-6 md:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelCls}>Name</label>

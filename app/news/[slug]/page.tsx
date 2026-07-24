@@ -35,7 +35,7 @@ export default async function ArticlePage({
 
   return (
     <>
-      <article className="bg-white">
+      <article className="glass-strong">
         {/* Article header */}
         <header className="border-b border-border-subtle">
           <div className="container-max max-w-3xl py-12 md:py-16">
@@ -60,7 +60,7 @@ export default async function ArticlePage({
 
         {/* Body */}
         <div className="container-max max-w-3xl py-12">
-          <div className="mb-8 flex items-start gap-3 rounded-lg border border-border-subtle border-l-4 border-l-accent-courage bg-surface-container-low p-4">
+          <div className="glass glass-sheen mb-8 flex items-start gap-3 rounded-lg border-l-4 border-l-accent-courage p-4">
             <Icon name="document" size={18} className="mt-0.5 shrink-0 text-accent-bronze" />
             <p className="text-body-sm text-secondary">
               Placeholder article. Body copy in this prototype&apos;s news section is filler —
@@ -86,7 +86,7 @@ export default async function ArticlePage({
       </article>
 
       {/* More stories */}
-      <section className="border-t border-border-subtle bg-background py-14">
+      <section className="border-t border-white/40 py-14">
         <div className="container-max">
           <h2 className="mb-6 font-headline text-headline-md font-bold text-on-surface">More from SGA</h2>
           <div className="grid gap-gutter md:grid-cols-3">
@@ -94,7 +94,7 @@ export default async function ArticlePage({
               <Link
                 key={a.slug}
                 href={`/news/${a.slug}`}
-                className="group flex h-full flex-col rounded-lg border border-border-subtle bg-white p-6 transition-shadow hover:shadow-ambient"
+                className="glass glass-sheen glass-hover group flex h-full flex-col rounded-lg p-6"
               >
                 <Chip label={a.category} accentKey={a.accent} />
                 <h3 className="mt-4 flex-1 font-headline text-headline-sm font-bold leading-snug text-on-surface transition-colors group-hover:text-uofl-red">

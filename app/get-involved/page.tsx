@@ -96,7 +96,7 @@ export default function GetInvolvedPage() {
       />
 
       {/* Org grid — the boards & councils */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="Boards & councils"
@@ -110,7 +110,7 @@ export default function GetInvolvedPage() {
                   href={o.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full flex-col rounded-lg border border-border-subtle bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-uofl-red hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex h-full flex-col rounded-lg p-6"
                 >
                   <div className="flex items-center justify-between">
                     <span className={`flex h-12 w-12 items-center justify-center rounded-lg text-white ${o.accentBg}`}>
@@ -135,7 +135,7 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* CPC funding explainer */}
-      <section className="border-y border-border-subtle bg-white py-16 md:py-20">
+      <section className="border-y border-white/40 py-16 md:py-20">
         <div className="container-max">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal>
@@ -150,7 +150,7 @@ export default function GetInvolvedPage() {
                 for events and programming. There&apos;s no mystery to it — here&apos;s the
                 whole process in plain English, plus who&apos;s eligible and what it covers.
               </p>
-              <div className="mt-6 rounded-lg border border-border-subtle border-l-4 border-l-accent-progress bg-surface-container-low p-5">
+              <div className="glass glass-sheen mt-6 rounded-lg border-l-4 border-l-accent-progress p-5">
                 <h3 className="font-headline text-headline-sm font-bold text-on-surface">What it funds</h3>
                 <p className="mt-2 text-body-sm text-secondary">
                   Eligible event and programming costs for registered student organizations —
@@ -171,7 +171,7 @@ export default function GetInvolvedPage() {
             <div className="flex flex-col gap-4">
               {cpcSteps.map((s, i) => (
                 <Reveal key={s.n} delay={i * 0.08}>
-                  <div className="flex gap-5 rounded-lg border border-border-subtle bg-surface-container-low p-5">
+                  <div className="glass glass-sheen flex gap-5 rounded-lg p-5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-uofl-red font-headline text-headline-sm font-bold text-white">
                       {s.n}
                     </span>
@@ -195,7 +195,7 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* Directory CTA */}
-      <section className="bg-uofl-black py-14 text-white">
+      <section className="border-y border-white/10 bg-uofl-black/85 py-14 text-white backdrop-blur-xl">
         <div className="container-max flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <h2 className="font-headline text-headline-md font-bold">Not sure where to start?</h2>

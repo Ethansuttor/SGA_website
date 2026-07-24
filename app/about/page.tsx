@@ -29,7 +29,7 @@ export default function AboutPage() {
       />
 
       {/* Mission / values */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <Reveal>
             <SectionHeading eyebrow="Our mission" title="Empowering students. Enhancing campus." />
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="grid gap-4">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.08}>
-                <div className="flex items-start gap-4 rounded-lg border border-border-subtle bg-white p-6">
+                <div className="glass glass-sheen flex items-start gap-4 rounded-lg p-6">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-uofl-red text-white">
                     <Icon name={v.icon} size={22} />
                   </span>
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Org structure diagram */}
-      <section className="border-y border-border-subtle bg-white py-16 md:py-20">
+      <section className="border-y border-white/40 py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="How SGA is structured"
@@ -108,7 +108,7 @@ export default function AboutPage() {
                     : "text-accent-patterson";
                 return (
                   <Reveal key={b.slug} delay={i * 0.1}>
-                    <div className={`flex h-full flex-col rounded-lg border border-border-subtle border-t-4 ${border} bg-surface-container-low p-6`}>
+                    <div className={`glass glass-sheen flex h-full flex-col rounded-lg border-t-4 ${border} p-6`}>
                       <span className={`text-label-md font-bold uppercase tracking-wide ${text}`}>
                         {b.slug}
                       </span>
@@ -127,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* Governing documents */}
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max">
           <SectionHeading
             eyebrow="Governing documents"

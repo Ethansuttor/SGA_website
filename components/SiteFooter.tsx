@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-uofl-black text-white">
+    <footer className="bg-uofl-black/90 text-white backdrop-blur-xl">
       {/* Red CTA strip */}
       <div className="bg-uofl-red">
         <div className="container-max flex flex-col items-start justify-between gap-4 py-8 md:flex-row md:items-center">

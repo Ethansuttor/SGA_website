@@ -55,7 +55,7 @@ export function PageHeader({
   accentKey?: string;
 }) {
   return (
-    <section className="border-b border-border-subtle bg-white">
+    <section className="glass glass-sheen border-x-0 border-t-0 border-b border-b-white/50">
       <div className="container-max py-12 md:py-16">
         <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-2 text-label-sm text-secondary">
           {breadcrumbs.map((b, i) => (
@@ -139,8 +139,8 @@ export function OfficerCard({ officer }: { officer: Officer }) {
     .slice(0, 2)
     .join("");
   return (
-    <div className="group flex flex-col overflow-hidden rounded-lg border border-border-subtle bg-white transition-shadow duration-300 hover:shadow-ambient">
-      <div className="relative h-52 w-full overflow-hidden bg-surface-container-high">
+    <div className="glass glass-sheen glass-hover group flex flex-col rounded-lg">
+      <div className="relative h-52 w-full overflow-hidden rounded-t-lg bg-surface-container-high/60">
         {officer.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -206,7 +206,7 @@ export function LinkCard({
     </>
   );
   const cls =
-    "group flex h-full flex-col rounded-lg border border-border-subtle bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-uofl-red hover:shadow-ambient";
+    "glass glass-sheen glass-hover group flex h-full flex-col rounded-lg p-6";
   return external ? (
     <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
       {inner}

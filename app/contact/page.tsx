@@ -28,14 +28,14 @@ export default function ContactPage() {
         intro="Got a question, an idea, or a problem SGA should know about? We're in the Student Activities Center and we answer our email. Reach out — this is what we're here for."
       />
 
-      <section className="bg-background py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container-max grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           {/* Details */}
           <Reveal>
             <div className="flex flex-col gap-4">
               {details.map((d) => {
                 const content = (
-                  <div className="flex items-start gap-4 rounded-lg border border-border-subtle bg-white p-5 transition-colors hover:border-uofl-red">
+                  <div className="glass glass-sheen glass-hover flex items-start gap-4 rounded-lg p-5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-uofl-red text-white">
                       <Icon name={d.icon} size={20} />
                     </span>

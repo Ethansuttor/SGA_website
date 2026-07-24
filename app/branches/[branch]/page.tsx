@@ -58,7 +58,7 @@ export default async function BranchPage({
     : "border-l-accent-patterson";
 
   return (
-    <div className="bg-background">
+    <div>
       <div className="container-max flex flex-col gap-8 py-10 md:flex-row md:gap-12 md:py-14">
         {/* Side nav — 4px accent left border on active item */}
         <aside className="md:w-60 md:shrink-0">
@@ -66,7 +66,7 @@ export default async function BranchPage({
             <h2 className="font-headline text-headline-sm font-bold text-on-surface">Branches</h2>
             <p className="text-body-sm text-secondary">SGA Leadership</p>
           </div>
-          <nav className="flex flex-col overflow-hidden rounded-lg border border-border-subtle bg-white" aria-label="Branches">
+          <nav className="glass glass-sheen flex flex-col overflow-hidden rounded-lg" aria-label="Branches">
             <Link
               href="/branches"
               className="flex items-center gap-3 border-l-4 border-transparent px-4 py-3 text-label-md font-semibold text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-uofl-red"
@@ -100,7 +100,7 @@ export default async function BranchPage({
             })}
           </nav>
 
-          <div className="mt-6 rounded-lg border border-border-subtle bg-white p-5">
+          <div className="glass glass-sheen mt-6 rounded-lg p-5">
             <p className="text-label-md font-bold uppercase tracking-wide text-secondary">Official page</p>
             <p className="mt-2 text-body-sm text-secondary">
               This branch on the university&apos;s own SGA site:
@@ -156,7 +156,7 @@ export default async function BranchPage({
                 ))}
               </div>
             ) : (
-              <div className={`rounded-lg border border-border-subtle border-l-4 ${accentBorderL} bg-white p-6`}>
+              <div className={`glass glass-sheen rounded-lg border-l-4 ${accentBorderL} p-6`}>
                 <p className="text-body-md text-secondary">
                   The current {branch.name.toLowerCase()} roster is maintained on the official SGA
                   site. Add members to <code className="rounded bg-surface-container px-1.5 py-0.5 text-body-sm">data/officers.ts</code> to
@@ -176,7 +176,7 @@ export default async function BranchPage({
 
           {/* Responsibilities + details */}
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <section className="rounded-lg border border-border-subtle bg-white p-6">
+            <section className="glass glass-sheen rounded-lg p-6">
               <h2 className="font-headline text-headline-sm font-bold text-on-surface">What this branch does</h2>
               <ul className="mt-4 flex flex-col gap-3">
                 {branch.responsibilities.map((r) => (
@@ -190,13 +190,13 @@ export default async function BranchPage({
               </ul>
             </section>
             <div className="flex flex-col gap-6">
-              <section className="rounded-lg border border-border-subtle bg-white p-6">
+              <section className="glass glass-sheen rounded-lg p-6">
                 <h3 className="flex items-center gap-2 font-headline text-headline-sm font-bold text-on-surface">
                   <Icon name="users" size={20} className={accentText} /> Who serves
                 </h3>
                 <p className="mt-2 text-body-md text-secondary">{branch.makeup}</p>
               </section>
-              <section className="rounded-lg border border-border-subtle bg-white p-6">
+              <section className="glass glass-sheen rounded-lg p-6">
                 <h3 className="flex items-center gap-2 font-headline text-headline-sm font-bold text-on-surface">
                   <Icon name="clock" size={20} className={accentText} /> Meetings
                 </h3>

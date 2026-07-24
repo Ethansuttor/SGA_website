@@ -92,7 +92,7 @@ export default function HomePage() {
 
           {/* Hero side card — "in 5 seconds, here's what SGA does" */}
           <Reveal delay={0.15}>
-            <div className="relative rounded-lg border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm lg:ml-auto lg:max-w-sm">
+            <div className="glass-dark glass-sheen relative rounded-lg p-6 lg:ml-auto lg:max-w-sm">
               <p className="text-label-md font-bold uppercase tracking-[0.1em] text-white/60">
                 What that means for you
               </p>
@@ -116,8 +116,8 @@ export default function HomePage() {
       </section>
 
       {/* ---------- STATS STRIP ---------- */}
-      <section className="border-b border-border-subtle bg-white">
-        <div className="container-max grid grid-cols-2 gap-px overflow-hidden rounded-none lg:grid-cols-4">
+      <section className="glass glass-sheen border-x-0 border-t-0 border-b border-b-white/40">
+        <div className="container-max grid grid-cols-2 divide-x divide-y divide-white/40 lg:grid-cols-4 lg:divide-y-0">
           {stats.map((s, i) => (
             <Reveal
               key={s.label}
@@ -134,7 +134,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- HOW DO I... ---------- */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container-max">
           <SectionHeading
             eyebrow="Start here"
@@ -146,7 +146,7 @@ export default function HomePage() {
               <Reveal key={tile.title} delay={i * 0.08} as="article" className="h-full">
                 <Link
                   href={tile.href}
-                  className="group flex h-full flex-col rounded-lg border border-border-subtle bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-uofl-red hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex h-full flex-col rounded-lg p-7"
                 >
                   <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-lg text-white ${tile.accent}`}>
                     <Icon name={tile.icon} size={26} />
@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- MEET YOUR TOP 4 ---------- */}
-      <section className="border-y border-border-subtle bg-white py-16 md:py-24">
+      <section className="border-y border-white/40 py-16 md:py-24">
         <div className="container-max">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <SectionHeading
@@ -193,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- NEWS PREVIEW ---------- */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container-max">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <SectionHeading
@@ -210,7 +210,7 @@ export default function HomePage() {
               <Reveal key={a.slug} delay={i * 0.08} as="article" className="h-full">
                 <Link
                   href={`/news/${a.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-lg border border-border-subtle bg-white transition-shadow hover:shadow-ambient"
+                  className="glass glass-sheen glass-hover group flex h-full flex-col overflow-hidden rounded-lg"
                 >
                   <div className={`h-2 w-full ${a.accent === "accent-loyalty" ? "bg-accent-loyalty" : a.accent === "accent-progress" ? "bg-accent-progress" : "bg-accent-patterson"}`} />
                   <div className="flex flex-1 flex-col p-6">
@@ -231,7 +231,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- QUICK LINKS MEGA GRID ---------- */}
-      <section className="bg-uofl-black py-16 text-white md:py-24">
+      <section className="border-y border-white/10 bg-uofl-black/85 py-16 text-white backdrop-blur-xl md:py-24">
         <div className="container-max">
           <div className="mb-10 flex flex-col gap-3">
             <span className="text-label-md font-bold uppercase tracking-[0.12em] text-uofl-red">
@@ -252,7 +252,7 @@ export default function HomePage() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 rounded border border-white/12 bg-white/[0.03] px-4 py-3.5 transition-colors hover:border-uofl-red hover:bg-white/[0.07]"
+                className="glass-dark glass-hover group flex items-center justify-between gap-3 rounded px-4 py-3.5"
               >
                 <span className="flex flex-col">
                   <span className="font-body text-body-md font-semibold">{s.label}</span>
